@@ -1,0 +1,17 @@
+import("iosys");
+
+fun main() {
+    println("Wave OS Bootloader Initialized");
+
+    var kernel_address :ptr = load_kernel();
+
+    jump_to_kernel(kernel_address);
+}
+
+fun load_kernel() -> ptr {
+    return &kernel_start;
+}
+
+fun jump_to_kernel(kernel_address :ptr) {
+    println("Jumping to kernel at address: ", kernel_address);
+}

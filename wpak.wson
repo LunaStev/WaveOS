@@ -1,0 +1,8 @@
+{
+    name = "WaveOS",
+    version = 0.1.0,
+    lib = false,
+
+    // library
+    dependencies = []
+}

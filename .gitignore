@@ -1,0 +1,8 @@
+# OS and IDE related files
+.DS_Store
+.idea/
+.vscode/
+
+# Additional files to ignore as needed
+*.log
+*.tmp

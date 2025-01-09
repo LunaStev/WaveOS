@@ -1,0 +1,9 @@
+import("iosys");
+
+fun handle_syscall(syscall_num :i32, params :array<i32>) {
+    match syscall_num {
+        1 => println("System call 1: Print message."),
+        2 => println("System call 2: Allocate memory."),
+        _ => println("Unknown system call."),
+    }
+}

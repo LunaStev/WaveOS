@@ -1,0 +1,23 @@
+import("iosys");
+import("memory");
+import("syscall");
+import("io");
+
+fun main() {
+    initialize_kernel();
+
+    loop {
+        schedule_processes();
+    }
+}
+
+fun initialize_kernel() {
+    println("Initializing Kernel...");
+
+    memory.setup_memory();
+    io.setup_io();
+}
+
+fun schedule_processes() {
+    println("Scheduling processes...");
+}

@@ -1,0 +1,31 @@
+fun main() {
+    asm {
+        "mov ax, 0x03"
+        "int 0x10"
+    }
+
+    asm {
+        "mov si, message"
+        "print_loop:"
+        "lodsb"
+        "cmp al, 0"
+        "je print_done"
+        "mov ah, 0x0E"
+        "int 0x10"
+        "jmp print_loop"
+        "print_done:"
+    }
+
+    asm {
+        "loop_start:"
+        "mov ah, 0x00"
+        "int 0x16"
+        "mov ah, 0x0E"
+        "int 0x10"
+        "jmp loop_start"
+    }
+
+    asm {
+        "message: .asciz \"WaveOS Bootloader Stage 1\""
+    }
+}

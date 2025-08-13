@@ -1,9 +1,0 @@
-import("iosys");
-
-fun setup_io() {
-    println("Setting uip I/O...");
-}
-
-fun print_message(msg :str) {
-    println("Printing message: {}", msg)
-}
